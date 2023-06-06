@@ -1,0 +1,112 @@
+
+/* toggle start here */
+  label{
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    right: 10px;
+    top: 56px;
+    float: left;
+    display: block;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px 5px 15px rgba(255,255,255,0.4);
+    cursor: pointer;
+  }
+  label:after {
+    content: "";
+    width:40px;
+    height: 40px;
+    position: absolute;
+    top:5px;
+    left:10px;
+    background: linear-gradient(180deg,#ffcc89,#d8860b);
+    border-radius: 40px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+  }
+  input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  input:checked + label {
+    background: #242424;
+  }
+  input:checked + label:after {
+    left:490px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg,#777,#3a3a3a);
+  }
+  label, label:after {
+    transition: 0.3s
+  }
+  input:checked + label {
+    background: #242424;
+  }
+  input:checked + label:after {
+    left:140px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg,#777,#3a3a3a);
+  }
+  label, label:after {
+    transition: 0.3s
+  }
+
+    /* toggle end here */
+/* google maps and about */
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500; 
+    
+  }
+  .center iframe{
+    width:80%;
+    height: 600px;
+    border:0;
+    
+  }
+ 
+  .swiper {
+    width: 100%;
+  
+  }
+  .swiper-slide img{
+    width: 100%;
+    height: fit-content;
+  }
+/* google maps and about end here */
+/* slideshow */
+.conteiner{
+  width: 80%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sketchfab-embed-wrapper {
+  width:60vw;
+  height:33.75vw;
+  margin-top: 2%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+/* slideshow end here*/
+ /* Стилі для мобільних пристроїв */
+@media (max-width: 1000px) {
+  label {
+    width: 100px;
+  }
+  input:checked + label:after{
+    left:90px;
+  }
+  .center iframe{
+    height: 400px;
+  }
+  .conteiner{
+    height: 300px;
+  }
+}
+
